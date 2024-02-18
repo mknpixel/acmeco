@@ -16,7 +16,7 @@ WITH customer_lifetime_value AS (
 )
 SELECT
     week_start_date,
-    AVG(lifetime_value_in_dollars) AS average_lifetime_value_in_dollars
+    ROUND(AVG(lifetime_value_in_dollars), 0) AS average_lifetime_value_in_dollars
 FROM
     customer_lifetime_value
 GROUP BY
